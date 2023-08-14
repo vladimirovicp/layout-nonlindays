@@ -1,3 +1,21 @@
+- let menu = {'#home': 'Главная',  '#conf': 'О конференции', '#rules': 'Правила оформления тезисов', '#dates': 'Ключевые даты', '#program': 'Программа конференции', '#rules': 'архив', '#howtoget': 'как добраться?', '#contacts': 'контакты' }
+
+
 header.header
     .container
-        h2 Header
+
+        div.header__wrap
+
+            div.header__logo-wrap
+                a(href='/' class="header__logo-link") 
+                    picture 
+                        svg.header__logo-img
+                            use(xlink:href="../img/sprite.svg#logo")
+                    h1.header__logo-title Нелинейные дни
+
+            div.header__navigation-wrap
+                nav.header__navigation
+                    ul.header__navigation-list
+                        each value, key in menu
+                            li.header__navigation-item
+                                a(href=key, class="header__navigation-link")= value  

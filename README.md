@@ -15,3 +15,7 @@
 * npm i -D gh-pages
 * npm i -D html-loader
 * npm i -D html-webpack-plugin
+
+### Useful links
+
+* [Туториал по pug (на русском)] (https://gist.github.com/neretin-trike/53aff5afb76153f050c958b82abd9228)
