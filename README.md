@@ -19,3 +19,18 @@
 ### Useful links
 
 * [Туториал по pug (на русском)] (https://gist.github.com/neretin-trike/53aff5afb76153f050c958b82abd9228)
+
+
+### mixin svg
+
+Подключение миксина
+```
+ +main-svg('', './img/svg/sprite.svg#' + soc.class)
+```
+
+Сам миксин
+```
+mixin main-svg(className, imgLink)
+    svg(class=className)
+        use(xlink:href=imgLink)
+```
