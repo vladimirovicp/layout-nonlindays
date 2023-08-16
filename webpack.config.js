@@ -47,25 +47,25 @@ module.exports = {
             filename: `./css/${filename('css')}`,
         }),
 
-        // new FileManagerPlugin({
-        //     events: {
-        //         onStart: {
-        //             delete: ['dist'],
-        //         },
-        //         onEnd: {
-        //             copy: [
-        //                 {
-        //                     source: path.join(__dirname, 'src/img/sprite-images'),
-        //                     destination: path.join(__dirname, 'dist/img/sprite-images'),
-        //                 },
-        //                 {
-        //                     source: path.join(__dirname, 'src/img/favicon'),
-        //                     destination: path.join(__dirname, 'dist/img/favicon'),
-        //                 },
-        //             ],
-        //         },
-        //     },
-        // }),
+        new FileManagerPlugin({
+            events: {
+                onStart: {
+                    delete: ['dist'],
+                },
+                onEnd: {
+                    copy: [
+                        {
+                            source: path.join(__dirname, 'src/img/sprite-images'),
+                            destination: path.join(__dirname, 'dist/img/sprite-images'),
+                        },
+                        {
+                            source: path.join(__dirname, 'src/img/favicon'),
+                            destination: path.join(__dirname, 'dist/img/favicon'),
+                        },
+                    ],
+                },
+            },
+        }),
 
     ],
 
@@ -109,15 +109,15 @@ module.exports = {
                 test: /\.(gif|png|jpg|jpeg|svg)$/i,
                 type: 'asset/resource',
             },
-            // {
-            //     test: /\.(ico)$/i,
-            //     type: 'asset/resource',
-            // },
-            //
-            // {
-            //     test: /\.(woff2?|eot|ttf|otf)$/i,
-            //     type: 'asset/resource',
-            // },
+            {
+                test: /\.(ico)$/i,
+                type: 'asset/resource',
+            },
+            
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+            },
         ]
     }
 };

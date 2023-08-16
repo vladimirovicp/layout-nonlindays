@@ -14,7 +14,7 @@
 }
 
 html {
-  // font-family: '';
+  font-family: 'Jura';
   font-size: 0.7144vw; 
   font-style: normal;
   font-weight: normal;
@@ -46,8 +46,19 @@ li, ul{
   list-style: none;
 }
 
-@media (max-width: 140rem){
+@media (min-width: 1400px){
   html{
     font-size: 10px;
   }
+}
+
+@media (max-width: 48em) { //768
+  html {
+      font-size: 1.1042vw;
+  }
+  .container {
+    padding: 0 4rem;
+    width: 100%;
+  }
+
 }
