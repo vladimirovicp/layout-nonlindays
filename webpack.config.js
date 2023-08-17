@@ -47,25 +47,25 @@ module.exports = {
             filename: `./css/${filename('css')}`,
         }),
 
-        new FileManagerPlugin({
-            events: {
-                onStart: {
-                    delete: ['dist'],
-                },
-                onEnd: {
-                    copy: [
-                        {
-                            source: path.join(__dirname, 'src/img/sprite-images'),
-                            destination: path.join(__dirname, 'dist/img/sprite-images'),
-                        },
-                        {
-                            source: path.join(__dirname, 'src/img/favicon'),
-                            destination: path.join(__dirname, 'dist/img/favicon'),
-                        },
-                    ],
-                },
-            },
-        }),
+        // new FileManagerPlugin({
+        //     events: {
+        //         onStart: {
+        //             delete: ['dist'],
+        //         },
+        //         onEnd: {
+        //             copy: [
+        //                 {
+        //                     source: path.join(__dirname, 'src/img/sprite-images'),
+        //                     destination: path.join(__dirname, 'dist/img/sprite-images'),
+        //                 },
+        //                 {
+        //                     source: path.join(__dirname, 'src/img/favicon'),
+        //                     destination: path.join(__dirname, 'dist/img/favicon'),
+        //                 },
+        //             ],
+        //         },
+        //     },
+        // }),
 
     ],
 
@@ -89,7 +89,12 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
+                use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        hmr: isDev
+                    },
+                }, "css-loader"],
             },
             {
                 test: /\.s[ac]ss$/,
@@ -97,7 +102,7 @@ module.exports = {
                     loader: MiniCssExtractPlugin.loader,
                     options: {
                         publicPath: (resourcePath, context) => {
-                            return path.relative(path.dirname(resourcePath), context) + '../';
+                            return path.relative(path.dirname(resourcePath), context) + '/';
                         },
                     }
                 },
@@ -113,7 +118,7 @@ module.exports = {
                 test: /\.(ico)$/i,
                 type: 'asset/resource',
             },
-            
+
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
                 type: 'asset/resource',

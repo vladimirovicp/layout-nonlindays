@@ -1,0 +1,43 @@
+@font-face {
+	font-family: 'Jura';
+	src: url('../fonts/Jura/Jura-Bold.eot');
+	src: local('Jura-Bold'),
+	url('../fonts/Jura/Jura-Bold.eot') format('embedded-opentype'),
+	url('../fonts/Jura/Jura-Bold.woff') format('woff'),
+	url('../fonts/Jura/Jura-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Jura';
+	src: url('../fonts/Jura/Jura-BoldItalic.eot');
+	src: local('../fonts/Jura/Jura Bold Italic'), local('Jura-BoldItalic'),
+	url('../fonts/Jura/Jura-BoldItalic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Jura/Jura-BoldItalic.woff') format('woff'),
+	url('../fonts/Jura/Jura-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Jura';
+	src: url('../fonts/Jura/Jura-Regular.eot');
+	src: local('Jura-Regular'),
+	url('../fonts/Jura/Jura-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Jura/Jura-Regular.woff') format('woff'),
+	url('../fonts/Jura/Jura-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Jura';
+	src: url('../fonts/Jura/Jura-Italic.eot');
+	src: local('Jura Italic'), local('Jura-Italic'),
+	url('../fonts/Jura/Jura-Italic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Jura/Jura-Italic.woff') format('woff'),
+	url('../fonts/Jura/Jura-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
