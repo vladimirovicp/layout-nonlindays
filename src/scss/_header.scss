@@ -6,7 +6,7 @@
   &__line{
     content: '';
     top: 8rem;
-    width: 80%;
+    width: 100%;
     height: .1rem;
     background: $black;
     margin: 0 auto;
@@ -16,7 +16,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 8rem;
     width: 100%;
     position: relative;
@@ -28,7 +28,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem;
+      gap: 2rem;
       max-width: max-content;
       margin: 0 auto;
     }
@@ -41,7 +41,7 @@
     }
 
     &-title{
-      font-size: 4.8rem;
+      font-size: 2.3rem;
       font-weight: 400;
     }
   }
@@ -165,19 +165,5 @@
 ._burger{
   border-radius: 50%;
   transition: .5s border-radius ease-in-out;
-  ._burger-icon{
-    
-    // top: 50%;
-    // transform: rotate(-45deg);
-    
-   
-    // &::after{
-    //   width: 3rem;
-    //   top: -50%;
-    //   transform: rotate(90deg);
-    // }
-    // &::before{
-    //   width: 0;
-    // }
-  }
+ 
 }
