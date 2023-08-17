@@ -1,6 +1,6 @@
 .header{
   background: $grey;
-  height: 8rem;
+  height: 7rem;
   width: 100%;
 
   &__line{
@@ -17,7 +17,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 8rem;
+    height: 7rem;
     width: 100%;
     position: relative;
   }
@@ -41,8 +41,8 @@
     }
 
     &-title{
-      font-size: 2.3rem;
-      font-weight: 400;
+      font-size: 2.4rem;
+      font-weight: bold;
     }
   }
 
@@ -89,61 +89,17 @@
       
     }
   }
-  &__user{
-    &-wrap{
-      position: relative;
-      cursor: pointer;
-      background-color: $white;
-      border: .3rem solid $grey-black;
-      top: 0;
-      height: 7rem;
-      width: 7rem;
-      right: 0;
-      margin-right: 4rem;
-    }
-  }
   &__burger{
+
+    position: fixed;
+    background: red;
+    width: 8rem;
+    height: 8rem;
+    top: 3rem;
+    left: 20rem;
+
     &-wrap{
-      position: relative;
-      cursor: pointer;
-      border-radius: 0 0 50% 0;
-      background-color: $white;
-      border: .3rem solid $grey-black;
-      top: 0;
-      height: 7rem;
-      width: 7rem;
-      left: 0;
-      margin-left: 4rem;
-      transition: .5s border-radius ease-in-out;
-    }
-
-    position: absolute;
-    background: $black;
-    border-radius: 15rem;
-    width: 4rem;
-    height: .4rem;
-    top: 1.6rem;
-    left: 1.4rem;
-
-    &::after{
-      display: block;
-      content: '';
-      background: $black;
-      border-radius: 15rem;
-      width: 3rem;
-      height: .4rem;
-      position: relative;
-      top: 1rem;
-    }
-    &::before{
-      display: block;
-      content: '';
-      background: $black;
-      border-radius: 15rem;
-      width: 1.5rem;
-      height: .4rem;
-      position: relative;
-      top: 2.5rem;
+      
     }
   }
 }
