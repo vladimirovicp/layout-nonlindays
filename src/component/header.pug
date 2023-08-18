@@ -12,28 +12,26 @@
 
 
 header.header
-   
-    div.header__wrap
-        div.header__burger
-            div.header__burger-wrap
+    div.container
+        div.header__wrap
+            div.header__burger-wrapper
+                div.header__burger
+                    div.header__burger-wrap
+                        span.header__burger-wrap-line
 
-            
-        div.header__logo-wrap
-            a(href='/' class="header__logo-link")
-                picture
-                    svg.header__logo-img
-                        use(xlink:href="../img/sprite.svg#logo")
-                h1.header__logo-title Нелинейные дни
+            div.header__logo-wrap
+                a(href='/' class="header__logo-link")
+                    picture
+                        svg.header__logo-img
+                            use(xlink:href="../img/sprite.svg#logo")
+                    h1.header__logo-title Нелинейные дни
 
-        div.header__navigation-wrap
-            nav.header__navigation
-                ul.header__navigation-list
-                    each value, key in menu
-                        li.header__navigation-item
-                            a(href=key, class="header__navigation-link")= value
+            div.header__navigation-wrap
+                nav.header__navigation
+                    ul.header__navigation-list
+                        each value, key in menu
+                            li.header__navigation-item
+                                a(href=key, class="header__navigation-link")= value
 
-        
         
     div.header__line
-    
-            
