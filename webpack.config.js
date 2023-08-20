@@ -89,7 +89,12 @@ module.exports = {
             },
             {
                 test: /\.css$/i,
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
+                use: [{
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        hmr: isDev
+                    },
+                }, "css-loader"],
             },
             {
                 test: /\.s[ac]ss$/,
@@ -97,7 +102,7 @@ module.exports = {
                     loader: MiniCssExtractPlugin.loader,
                     options: {
                         publicPath: (resourcePath, context) => {
-                            return path.relative(path.dirname(resourcePath), context) + '../';
+                            return path.relative(path.dirname(resourcePath), context) + '/';
                         },
                     }
                 },
@@ -109,15 +114,15 @@ module.exports = {
                 test: /\.(gif|png|jpg|jpeg|svg)$/i,
                 type: 'asset/resource',
             },
-            // {
-            //     test: /\.(ico)$/i,
-            //     type: 'asset/resource',
-            // },
-            //
-            // {
-            //     test: /\.(woff2?|eot|ttf|otf)$/i,
-            //     type: 'asset/resource',
-            // },
+            {
+                test: /\.(ico)$/i,
+                type: 'asset/resource',
+            },
+
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+            },
         ]
     }
 };
