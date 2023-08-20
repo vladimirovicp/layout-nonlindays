@@ -37,3 +37,7 @@ mixin main-svg(className, imgLink)
     svg(class=className)
         use(xlink:href=imgLink)
 ```
+
+### Необходимый рефактор
+
+- Заменить пути картинок в header
