@@ -41,3 +41,4 @@ mixin main-svg(className, imgLink)
 ### Необходимый рефактор
 
 - Заменить пути картинок в header
+- Изменить в header after и before на один псевдоэлемент
