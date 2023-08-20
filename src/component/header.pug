@@ -5,19 +5,19 @@
         '#rules': 'Правила оформления тезисов',
         '#dates': 'Ключевые даты',
         '#program': 'Программа конференции',
-        '#rules': 'архив',
-        '#howtoget': 'как добраться',
-        '#contacts': 'контакты'
+        '#rules': 'Архив',
+        '#howtoget': 'Как добраться',
+        '#contacts': 'Контакты'
     }
 
 
 header.header
     div.container
         div.header__wrap
-            div.header__burger-wrapper
-                div.header__burger
-                    div.header__burger-wrap
-                        span.header__burger-wrap-line
+            div.header__burger-wrap
+                div.header__burger-shadow 
+                    div.header__burger-triangle
+                        span.header__burger-line
 
             div.header__logo-wrap
                 a(href='/' class="header__logo-link")
@@ -32,6 +32,5 @@ header.header
                         each value, key in menu
                             li.header__navigation-item
                                 a(href=key, class="header__navigation-link")= value
-
-        
+    
     div.header__line
