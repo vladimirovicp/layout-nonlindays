@@ -1,0 +1,29 @@
+mixin main-svg(className, imgLink)
+    svg(class=className)
+        use(xlink:href=imgLink)
+
+mixin triangle-svg(className, imgLink)
+    svg(class=className)
+        use(xlink:href=imgLink)
+
+mixin snowflake-svg(className, imgLink)
+    svg(class=className)
+        use(xlink:href=imgLink)
+
+-
+    let heroMenu = {
+        '#conf': 'О конференции',
+        '#programm-committee': 'Программный комитет',
+        '#organising-committee': 'Организационный комитет',
+        '#organizers': 'Организаторы'
+    };
+    let menu = {
+        '#home': 'Главная',
+        '#conf': 'О конференции',
+        '#rules': 'Правила оформления тезисов',
+        '#dates': 'Ключевые даты',
+        '#program': 'Программа конференции',
+        '#rules': 'Архив',
+        '#howtoget': 'Как добраться',
+        '#contacts': 'Контакты'
+    }

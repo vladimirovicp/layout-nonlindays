@@ -78,6 +78,7 @@
         left: 0;
         transition: .5s padding ease-in-out;
       }
+
       &:hover{
         padding-left: 4rem;
         color: #878787;
@@ -85,7 +86,19 @@
           padding-left: 2rem;
         }
       }
-      
+    }
+    &-burger{
+      position: absolute;
+      content: "";
+      width: 5rem;
+      height: 5rem;
+      background-image: url(https://nonlindays.sgu.ru/themes/custom/a_nonlindays/img/window-close.svg);
+      background-repeat: no-repeat;
+      background-size: 5rem;
+      right: 5rem;
+      top: 5rem;
+      cursor: pointer;
+      z-index: 1000;
     }
   }
 
@@ -246,40 +259,31 @@
 }
 
 ._active{
-      background-color: $grey;
-      opacity: 1;
-      overflow: visible;
-      width: 100vw;
-      height: 100vh;
-      top: 0%;
-      position: absolute;
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      padding-left: 5rem;
-      padding-top: 10rem;
-      &::before{
-        position: absolute;
-        content: "";
-        width: 75rem;
-        height: 62rem;
-        bottom: 0;
-        right: 0;
-        background-image: url(https://nonlindays.sgu.ru/themes/custom/a_nonlindays/img/triangle.svg);
-        background-size: 75rem 65rem;
-        background-repeat: no-repeat;
-        opacity: 1;
-      }
-      &::after{
-        position: absolute;
-        content: "";
-        width: 5rem;
-        height: 5rem;
-        background-image: url(https://nonlindays.sgu.ru/themes/custom/a_nonlindays/img/window-close.svg);
-        background-repeat: no-repeat;
-        background-size: 5rem;
-        right: 5rem;
-        top: 5rem;
-        cursor: pointer;
-      }
+  background-color: $grey;
+  opacity: 1;
+  overflow: visible;
+  width: 100vw;
+  height: 100vh;
+  top: 0%;
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 5rem;
+  padding-top: 10rem;
+  z-index: 100;
+  
+  &::before{
+    position: absolute;
+    content: "";
+    width: 75rem;
+    height: 62rem;
+    bottom: 0;
+    right: 0;
+    background-image: url(https://nonlindays.sgu.ru/themes/custom/a_nonlindays/img/triangle.svg);
+    background-size: 75rem 65rem;
+    background-repeat: no-repeat;
+    opacity: 1;
+  }
+   
 }
