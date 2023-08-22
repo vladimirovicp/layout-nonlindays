@@ -20,6 +20,7 @@
 ### Useful links
 
 * [Туториал по pug (на русском)](https://gist.github.com/neretin-trike/53aff5afb76153f050c958b82abd9228)
+* [Еще один туториал по pug](https://zaurmag.ru/html5-css3/html-preprotsessor-pug-jade.html)
 
 * [Макет](https://www.figma.com/file/YQ0I0RzLPy1EGsz3jy1qA8/%D0%9D%D0%B5%D0%BB%D0%B8%D0%BD%D0%B5%D0%B9%D0%BD%D1%8B%D0%B5-%D0%B4%D0%BD%D0%B8?type=design&node-id=0-1&mode=design&t=4g4llrYUZxsiL4UZ-0)
 
@@ -42,3 +43,4 @@ mixin main-svg(className, imgLink)
 
 - Заменить пути картинок в header
 - Изменить в header after и before на один псевдоэлемент
+- Секция about вставить ссылку в текст (#{переменная} - разобраться как ссылку вставить в переменную) 

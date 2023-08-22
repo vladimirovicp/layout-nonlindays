@@ -1,0 +1,12 @@
+section.offer 
+    div.container
+        div.offer__wrap
+            div.offer__logo-wrap
+                +main-svg('offer__logo', '../img/svg/logo.svg#logo')
+            div.offer__title Нелинейные дни
+            div.offer__description в Саратове для молодых
+            nav.offer__navigation 
+                ul.offer__navigation-list
+                    each value, key in heroMenu
+                        li.offer__navigation-item
+                            a(href=key, class="offer__navigation-link")= value

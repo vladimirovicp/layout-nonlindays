@@ -15,10 +15,12 @@
 
 html {
   font-family: 'Jura', sans-serif;
-  font-size: 0.7144vw;
+  // font-size: 0.7144vw;
+  font-size: 0.625vw;
   font-style: normal;
   font-weight: normal;
   line-height: 1;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -28,7 +30,6 @@ body {
 
 .container {
   width: 140rem;
-  padding: 0 2rem;
   margin: 0 auto;
 }
 
@@ -45,7 +46,18 @@ li, ul{
   list-style: none;
 }
 
-@media (min-width: 1400px){
+.icon{
+  &-download{
+    background-image: url('https://nonlindays.sgu.ru/core/themes/classy/images/icons/package-x-generic.png');
+    background-repeat: no-repeat;
+    width: 1.6rem;
+    height: 1.6rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1600px){
   html{
     font-size: 10px;
   }

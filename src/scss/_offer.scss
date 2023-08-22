@@ -1,7 +1,8 @@
 .offer{
     width: 100%;
-    height: calc(100vh - 22rem);
+    height: calc(100vh - 12rem);
     position: relative;
+    margin-top: 12rem;
     &::before{
         position: absolute;
         content: "";
@@ -11,7 +12,7 @@
         top: 0;
         right: 0;
         background-image: url("https://nonlindays.sgu.ru/themes/custom/a_nonlindays/img/triangle-top-left.svg");
-        background-size: 10% 100%;
+        background-size: 14% 100%;
         background-repeat: no-repeat;
         background-position: right;
     }

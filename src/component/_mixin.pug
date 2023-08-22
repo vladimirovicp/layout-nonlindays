@@ -10,6 +10,11 @@ mixin snowflake-svg(className, imgLink)
     svg(class=className)
         use(xlink:href=imgLink)
 
+mixin siteEmail(href, name)
+    a(class!= attributes.class href= href)= name
+
+
+//- Перетащить потом в _navigation.pug
 -
     let heroMenu = {
         '#conf': 'О конференции',
