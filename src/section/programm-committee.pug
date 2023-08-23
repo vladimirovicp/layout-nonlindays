@@ -1,4 +1,3 @@
-
 section.progcom
     div.container
         div.progcom__wrap 
@@ -14,8 +13,9 @@ section.progcom
                 // дальше будет валиться ошибка (Если include _mixin он прокушал, тогда почему не видит переменные?)
                  
 
-                ul.progcom__employee-list
-                    each value, key in employeeList
-                        li.progcom__employee-item
-                            a(href=key, class="progcom__employee-link")= value
+                +employeeList()
+                //ul.progcom__employee-list
+                //    each value, key in employeeList
+                //        li.progcom__employee-item
+                //            a(href=key, class="progcom__employee-link")= value
                 
