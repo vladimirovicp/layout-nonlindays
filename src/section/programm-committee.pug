@@ -1,0 +1,21 @@
+
+section.progcom
+    div.container
+        div.progcom__wrap 
+            div.progcom__wrap-employee#programm-committee
+                h2.progcom__title Программный комитет
+                div.progcom__wrap-chairmen
+                    
+            div.progcom__wrap-line
+
+            div.progcom__wrap-organization#organising-committee
+                h2.progcom__title Организационный комитет
+
+                // дальше будет валиться ошибка (Если include _mixin он прокушал, тогда почему не видит переменные?)
+                 
+
+                ul.progcom__employee-list
+                    each value, key in employeeList
+                        li.progcom__employee-item
+                            a(href=key, class="progcom__employee-link")= value
+                
